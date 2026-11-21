@@ -33,20 +33,21 @@ export function Navbar() {
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed top-4 left-0 right-0 z-50 mx-4 lg:mx-auto lg:max-w-6xl"
+        className="fixed top-4 left-0 right-0 z-50 mx-4 flex items-center gap-4 lg:mx-auto lg:max-w-7xl"
       >
-        <div className={cn("rounded-2xl transition-all duration-500", scrolled ? "glass-nav-scrolled" : "glass-nav")}>
+        <Link href="/" aria-label="Aryvion home" className="relative z-50 flex shrink-0 items-center">
+          <Image
+            src="/NavLogo.png"
+            alt="Aryvion"
+            width={360}
+            height={100}
+            priority
+            className="h-12 sm:h-16 lg:h-20 w-auto object-contain"
+          />
+        </Link>
+
+        <div className={cn("flex-1 rounded-2xl transition-all duration-500", scrolled ? "glass-nav-scrolled" : "glass-nav")}>
           <div className="flex h-14 sm:h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
-            <Link href="/" aria-label="Aryvion home" className="flex items-center">
-              <Image
-                src="/NavLogo.png"
-                alt="Aryvion"
-                width={160}
-                height={40}
-                priority
-                className="h-8 sm:h-9 w-auto object-contain"
-              />
-            </Link>
 
             <nav className="hidden lg:flex items-center gap-1" aria-label="Primary">
               {nav.map((l) => (

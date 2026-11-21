@@ -11,6 +11,7 @@ export const site = {
     // { label: "Instagram", href: "https://instagram.com/..." },
   ] as { label: string; href: string }[],
 };
+export const CONTACT_EMAIL = "krushnapokharkar4@gmail.com";
 
 export const nav = [
   { label: "About", href: "about" },
